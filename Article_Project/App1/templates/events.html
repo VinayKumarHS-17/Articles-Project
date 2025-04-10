@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'App1.css' %}?v=1.1">
+    <title>Events</title>
+</head>
+<body>
+    
+    {% block content %}
+    <div class="event-list">
+        {% for i in daily_events %}
+            <div class="content-list"> 
+                <h1>{{ i.title }}</h1>
+                <div class="l-r">
+                  <h3 >{{ i.date }}</h3>
+                  <h3 >Pay: ₹ {{ i.payment_amount }}</h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endblock content %}
+        
+    <h4><a href="{% url 'home' %}">Back</a></h4>
+</body>
+</html>

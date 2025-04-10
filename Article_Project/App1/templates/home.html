@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Article Project{% endblock title %}
+
+
+
+{% block content %}
+    <div class="event-list">
+        {% for i in all_events %}
+            <div class="content-list"> 
+                <h1>{{ i.title }}</h1>
+                <div class="l-r">
+                  <h3 >{{ i.date }}</h3>
+                  <h3 >Pay: ₹ {{ i.payment_amount }}</h3>
+                </div>
+            </div>
+        {% endfor %}
+        <h4><a href="{% url 'construction' %}" style="font-weight: bold; font-size: 18px;">Load More</a></h4>
+    </div>
+
+    <footer>
+        <h2>Developed by VINAY KUMAR</h2>
+    </footer>
+    
+{% endblock content %}

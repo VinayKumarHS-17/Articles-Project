@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      
+      {% block content %}
+            <div class="const1">
+                  <h1><strong>More events under developing stage</strong></h1>
+                  <img src="{% static 'image.png' %}" alt="" class="dev">
+                  <a href="{% url 'home' %}"><button>Back</button></a>
+            </div>
+      {% endblock content %}
+            
+</body>
+</html>

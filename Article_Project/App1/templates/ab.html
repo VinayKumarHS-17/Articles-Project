@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'App1.css' %}?v=1.1">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h3>{{key.a}}</h3>
+        <!-- <div class="coming">
+            <h4>Coming Soon.....</h4>
+        </div> -->
+    </div>
+    
+    <button><a href="{% url 'home' %}">BACK</a></button>
+</body>
+</html>
+
